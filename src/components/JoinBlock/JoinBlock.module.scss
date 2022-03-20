@@ -1,0 +1,60 @@
+.joinBlockBg{
+   max-width: 500px;
+   height: 500px;
+   background-color: #4682B4;
+   margin: 0 auto;
+   margin-top: 50px;
+   padding: 0 15px;
+   padding-top: 80px;
+   border-radius: 10px;
+}
+
+.joinBlockBgWhite{
+   max-width: 350px;
+   height: 350px;
+   background-color: #fff;
+   margin: 0 auto;
+   padding: 0 10px;
+   padding-top: 70px;
+   border-radius: 10px;
+}
+
+.joinBlock{
+   display:flex;
+   flex-direction: column;
+   width: 250px;
+   margin: 0 auto;
+
+   input{
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+      outline: none;
+      font-size: 16px;
+   }
+   
+   button{
+      padding: 10px 0;
+      background-color: #4682B4;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+
+      &:active{
+         transform: translateY(2px);
+      }
+
+      &:hover{
+         background-color: darken(#4682B4, 5%);
+      }
+   }
+}
+
+@media(max-width: 450px){
+   .joinBlockBg{
+      height: 450px;
+      padding-top: 50px;
+   }
+}

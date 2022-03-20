@@ -1,0 +1,144 @@
+.chat{
+   max-width: 700px;
+   margin: 0 auto;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   display: flex;
+   border: 2px solid #C0C0C0;
+   border-radius: 5px;
+   height: 550px;
+
+   .users{
+      word-break: break-all;
+      padding: 20px;
+      border-right: 2px solid #C0C0C0;
+      width: 25%;
+      background-color: #F5F5F5;
+
+      p{
+         font-size: 20px;
+         font-weight: 600;
+      }
+
+      b{
+         font-size: 20px;
+      }
+
+      ul{
+         list-style: none;
+         padding: 0;
+
+         li{
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+         }
+      }
+   }
+
+   .chatMessages{
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      padding: 25px;
+      padding-bottom: 15px;
+
+      .messages{
+         flex: 1;
+         overflow: auto;
+         margin-bottom: 15px;
+
+         .message{
+            margin-bottom: 10px;
+         p{
+            color: #fff;
+            background-color: #4169E1;
+            width: max-content;
+            padding: 8px;
+            border-radius: 10px;
+            max-width: 100%;
+            word-break: break-all;
+            margin: 0;
+            margin-bottom: 5px;
+         }
+         span{
+            color: #808080;
+            font-size: 16px;
+         }
+      }
+      }
+      .form{
+         text-align: end;
+
+         form{
+            margin-bottom: 10px;
+         }
+
+         textarea{
+            width: 100%;
+            height: 70px;
+            resize: none;
+            border-radius: 10px;
+            padding: 10px;
+
+            &:focus{
+               outline: none;
+            }
+         }
+
+         button{
+            background-color: #4169E1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover{
+               background-color: darken(#4169E1, 5%);
+            }
+
+            &:active{
+               transform: translateY(1px);
+            }
+         }
+      }
+   }
+}
+
+@media(max-width: 700px){
+   .chat{
+      flex-direction: column;
+      
+      .users{
+         width: 100%;
+         border-right: none;
+         border-bottom: 2px solid #C0C0C0;
+
+         p,ul{
+            margin: 0;
+         }
+         ul{
+            margin-top: 5px;
+            display: flex;
+         }
+         li{
+            width: max-content;
+            margin-right: 5px;
+
+            &:last-child{
+               margin-right: 0;
+            }
+         }
+      }
+      .chatMessages{
+         width: 100%;
+         flex: 1;
+         min-height: 0;
+      }
+   }
+   
+}
