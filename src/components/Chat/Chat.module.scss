@@ -97,9 +97,7 @@
             padding: 10px;
             cursor: pointer;
 
-            &:hover{
-               background-color: darken(#4169E1, 5%);
-            }
+           
 
             &:active{
                transform: translateY(1px);
@@ -141,4 +139,16 @@
       }
    }
    
+}
+
+@media(hover: hover) and (pointer: fine){
+   .chat{
+      .chatMessages{
+         .form{
+            button:hover{
+               background-color: darken(#4169E1, 5%);
+            }
+         }
+      }
+   }
 }

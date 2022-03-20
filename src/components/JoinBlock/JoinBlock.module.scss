@@ -45,10 +45,6 @@
       &:active{
          transform: translateY(2px);
       }
-
-      &:hover{
-         background-color: darken(#4682B4, 5%);
-      }
    }
 }
 
@@ -56,5 +52,13 @@
    .joinBlockBg{
       height: 450px;
       padding-top: 50px;
+   }
+}
+
+@media(hover: hover) and (pointer: fine){
+   .joinBlock{
+      button:hover{
+         background-color: darken(#4682B4, 5%);
+      }
    }
 }
