@@ -1,10 +1,14 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 const PORT = process.env.PORT || 9999;
+
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(express.json());
 
